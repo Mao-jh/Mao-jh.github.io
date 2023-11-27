@@ -98,29 +98,27 @@ class WindowManager
 		localStorage.setItem("windows", JSON.stringify(this.#windows));
 	}
 
-	update ()
-	{
-		//console.log(step);
-		let winShape = this.getWinShape();
+update() {
+    let winShape = this.getWinShape();
 
-		//console.log(winShape.x, winShape.y);
+    if (winShape.x !== this.#winData.shape.x ||
+        winShape.y !== this.#winData.shape.y ||
+        winShape.w !== this.#winData.shape.w ||
+        winShape.h !== this.#winData.shape.h) {
 
-		if (winShape.x != this.#winData.shape.x ||
-			winShape.y != this.#winData.shape.y ||
-			winShape.w != this.#winData.shape.w ||
-			winShape.h != this.#winData.shape.h)
-		{
-			
-			this.#winData.shape = winShape;
+        let index = this.getWindowIndexFromId(this.#id);
+        let winIndex = this.#windows.findIndex(window => window.id === this.#id);
 
-			let index = this.getWindowIndexFromId(this.#id);
-			this.#windows[index].shape = winShape;
+        if (winIndex !== -1) {  // if found
+            this.#windows[winIndex].shape = winShape;
+        }
 
-			//console.log(windows);
-			if (this.#winShapeChangeCallback) this.#winShapeChangeCallback();
-			this.updateWindowsLocalStorage();
-		}
-	}
+        this.#winData.shape = winShape;
+
+        if (this.#winShapeChangeCallback) this.#winShapeChangeCallback();
+        this.updateWindowsLocalStorage();
+    }
+}
 
 	setWinShapeChangeCallback (callback)
 	{
