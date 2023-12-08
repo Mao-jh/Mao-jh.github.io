@@ -10,13 +10,13 @@
 <body style="background-color: #333333;"><!--灰色网页--!>
 <h3 style=" color: white; font-weight: bold;text-align:center;">毛总</h3> 
 <button onclick="myFunction()">下载</button>
-<button onclick="alert('没用')">测试功能</button>
+<!--button onclick="alert('没用')">测试功能</button--!>
 </body>
 <script>
 function myFunction() {
   var link = document.createElement('a');
-  link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent('都说测试用的无需下载 本页链接 https://mao-jh.github.io/'));
-  link.setAttribute('download', '测试用 无需下载.txt');
+  link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent('https://mao-jh.github.io/'));
+  link.setAttribute('download', '毛总的html链接.html');
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
