@@ -5,7 +5,32 @@
    <mata http-equiv="X-UA-Compatible" Content="IE=edge">
    <meta name="viewport" content="width-device-width, initial-scale=1.0">
    <title>毛总</title>
+      <style>
+    #game-board {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border: 1px solid #000;
+    }
+    .snake {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: green;
+    }
+    .food {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+    }
+</style>
 </head>
+   <div id="game-board">
+    <div id="snake" class="snake"></div>
+    <div id="food" class="food"></div>
+</div>
+<script src="snake.js"></script>
 <style>a{color: white;}<!--a元素为白色--></style>
 <body style="background-color: #333333;"><!--灰色网页--!>
 <h3 style=" color: white; font-weight: bold;text-align:center;">毛总</h3> 
