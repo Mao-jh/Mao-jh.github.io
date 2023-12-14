@@ -1,51 +1,32 @@
 <!DOCTYPE html>
-<html lang= "zh">
+<html lang="zh">
 <head>
    <meta charset="UTF-8">
-   <mata http-equiv="X-UA-Compatible" Content="IE=edge">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width-device-width, initial-scale=1.0">
    <title>毛总</title>
-      <style>
-    #game-board {
-        position: relative;
-        width: 400px;
-        height: 400px;
-        border: 1px solid #000;
-    }
-    .snake {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background-color: green;
-    }
-    .food {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background-color: red;
-    }
-</style>
+   <style>
+      h1, h3 {
+         color: white;
+         text-align: center;
+      }
+   </style>
 </head>
-   <div id="game-board">
-    <div id="snake" class="snake"></div>
-    <div id="food" class="food"></div>
-</div>
-<script src="snake.js"></script>
-<style>a{color: white;}<!--a元素为白色--></style>
-<body style="background-color: #333333;"><!--灰色网页--!>
-<h3 style=" color: white; font-weight: bold;text-align:center;">毛总</h3> 
-<button onclick="myFunction()">下载</button>
-<!--button onclick="alert('没用')">测试功能</button--!>
-</body>
+<body style="background-color: #333333;">
+<h1><-毛总-></h1> 
+<a style="color: white;"href="https://magiconch.com/patina/">电子图片包浆</a>
+<a style="color: white;"href="https://cook.yyj.moe/random">今天吃什么</a>
+<a style="color: white;"href="https://cxh.papapoi.com/">抽象</a>
+<a style="color: white;"href="https://url.cloud.huawei.com/oCTHIUSSDC">蓝色小软件</a>
+<h3 onclick="myFunction()">下载文件</h3>
+<h3 onclick="alert('没用')">测试功能</h3>
 <script>
 function myFunction() {
   var link = document.createElement('a');
-  link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent('url:https://mao-jh.github.io/'));
-  link.setAttribute('download', '测试用 什么都没有.txt');
-  document.body.appendChild(link);
+  link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent('都说测试用的无需下载 本页链接 https://mao-jh.github.io/');
+  link.download = '测试用 无需下载.txt';
   link.click();
-  document.body.removeChild(link);
 }
 </script>
+</body>
 </html>
-<!-- color: white;白色文字/text-align:center;居中-->
